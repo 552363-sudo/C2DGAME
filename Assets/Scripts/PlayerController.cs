@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 1f;
         anim = GetComponent<Animator>();
-        groundLayerMask = LayerMask.GetMask("Ground");
+        groundLayerMask = LayerMask.GetMask("groundCheck");
 
         lives = 3;
         helper = gameObject.AddComponent<HelperScript>();
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
 
 
-        float rayLength = 0.6f; // length of raycast
+        float rayLength = 0.4f; // length of raycast
         bool hitSomething = false;
 
         // convert x and y offset into a Vector3 
